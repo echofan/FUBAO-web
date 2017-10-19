@@ -1,0 +1,52 @@
+.footer{position:fixed;z-index:10;bottom:0;width:100%;border-top:1px solid rgba(0,0,0,0.1);display:table;height:50px;background: #F8F8F8;}
+.footer .bar-item.active{ color: #43AC43;}
+.footer .bar-item{display: table-cell;width: 20%;text-align:center;vertical-align: middle;height: inherit;color: #999;position: relative;font-size: 11px;}
+.footer .bar-item .icon{width: 24px;height: 24px;display: block;margin:3px auto;background:url(../../img/jlt.png) no-repeat;background-size:96px;}
+.footer .bar-item .bar-home{background-position:0 0;}
+.footer .bar-item .bar-timeline{background-position:-24px -24px;}
+.footer .bar-item .bar-message{background-position:-48px 0;}
+.footer .bar-item .bar-user{background-position:-72px 0;}
+.new-bar-publish{width:55px;height:55px;background:url(../../img/jia.png) no-repeat;background-size:55px;position:relative;display:block;left:0;top:-7px;margin:-12px auto;}
+
+.control-label{height: 50px;line-height:50px;background-color: #f0f0f2;font-size:15px;padding-left:10px;}
+.user input{width: 100%;height: 50px;border:none;outline: none;font-size:15px;box-sizing: border-box;padding-left:10px;border-bottom:1px solid #f0f0f2;}
+
+.imgs{background: url(../../img/xiaode.jpg) no-repeat; width: 80px;height: 80px;background-size:80px;display:block;position:absolute;left:100px;top:5px;}
+.imgs span{width: 100%;height: 25px;line-height:25px;background:rgba(0,0,0,0.6);position:absolute;bottom:0;text-align: center;color:#fff;}
+.ident{margin-top:10px;margin-left:10px;}
+.uls{margin-left:10px;margin-top:10px;}
+.uls li{color:gray;}
+
+.relation{background:#f0f0f2;}
+.relation .relation_head{height: 50px;line-height:50px;background: #f0f0f2;padding-left:10px;font-size:15px;margin-top:15px;}
+.relation ul li{margin-bottom:10px;background: #fff;height:50px;position:relative;} 
+.relation ul li .left{float:left;}
+.relation ul li .left span:first-child{display:block;font-size:16px;margin-left:10px;margin-top:5px;}
+.relation ul li .left span:last-child{display:block;font-size:10px;color:#ccc;margin-left:10px;}
+.relation ul li .right{float:right;margin-top:15px;margin-right:15px;}
+.relation ul li .right input{border:none;outline: none; width: 20px;height: 20px;border-radius:50%;visibility: hidden;}
+
+.radio_img{background:url(../../img/gouhao.png) no-repeat; height: 30px!important;width: 30px!important;background-size:30px;display:block;position:absolute;right:15px;top:11px;}
+.relation ul li .right .radio{height: 30px;width: 30px;border-radius:50%;border:1px solid #ccc;position:absolute;right:15px;top:11px;background-color: #fff;}
+.relation ul li .top{height: 50px;}
+.relation ul li .bot{height: 50px;display:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

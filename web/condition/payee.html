@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<meta content="" name="pgv" />
+	<title>动态</title>
+	<link rel="stylesheet" type="" href="../res/css/global.css">
+	<link rel="stylesheet" type="" href="../res/css/condition/audit.css">
+</head>
+
+<body class="payee">
+	<div class="container">
+		<div class="head">*以下信息（姓名除外）不会对外公开，仅用于审核</div>
+		<div class="level1">
+			<h1>收款人与患者的关系</h1>
+			<p>收款人为银行卡持有人，必须是患者本人或其直系亲属</p>
+			<div class="level1_box">
+				<span>关系</span>
+				<div class="select">
+					<select name="" id="relation">
+		    	 		<option value="">请选择与患者的关系</option>
+		    	 		<option value="">患者本人</option>
+		    	 		<option value="">患者配偶</option>
+		    	 		<option value="">患者的父母/子女/亲属</option>
+		    	 	  </select>
+					<div class="arrow"></div>
+				</div>
+			</div>
+		</div>
+		<div style="clear:both"></div>
+		<div class="level2">
+			<h1>收款人与患者的关系</h1>
+			<ul>
+				<li>
+					<span>真实姓名</span>
+					<input type="text" maxlength="2" placeholder="收款人真实姓名">
+				</li>
+				<li>
+					<span>身份证号</span>
+					<input type="text" minlength="15" maxlength="18" placeholder="请输入收款人身份证号">
+				</li>
+				<li>
+					<span>联系电话</span>
+					<input type="text" maxlength="11" placeholder="请输入联系电话">
+				</li>
+				<li style="display:block;" class="lis clearfix">
+					<span>开户银行</span>
+					<div class="select">
+						<select name="items" id="banks">
+		    			 	 	 <option value="">请选择开户银行</option>
+		    			 	 	 <option value="">工商银行</option>
+		    			 	 	 <option value="">中国银行</option>
+		    			 	 	 <option value="">建设银行</option>
+		    			 	 	 <option value="">招商银行</option>
+		    			 	 	 <option value="">农业银行</option>
+		    			 	 	 <option value="">平安银行</option>
+		    			 	 	 <option value="">中信银行</option>
+		    			 	 	 <option value="">光大银行</option>
+		    			 	 	 <option value="">浦发银行</option>
+		    			 	 	 <option value="">交通银行</option>
+		    			 	 	 <option value="">邮政储蓄银行</option>
+		    			 	 	 <option value="">华夏银行</option>
+		    			 	 	 <option value="">民生银行</option>
+		    			 	 	 <option value="">广发银行</option>
+		    			 	 	 <option value="">兴业银行</option>
+		    			 	 	 <option value="">上海银行</option>
+		    			 	 	 <option value="">浙商银行</option>
+		    			 	 </select>
+						<div class="arrow"></div>
+					</div>
+				</li>
+				<li>
+					<span>银行卡号</span>
+					<input type="text" placeholder="请输入银行卡号">
+				</li>
+			</ul>
+		</div>
+		<p class="foot_p">遇到问题了？拨打：15158433873咨询</p>
+		<div class="foot">保存</div>
+	</div>
+	<script src="../res/js/lib/jquery.min.js"></script>
+	<script src="../res/js/lib/zepto.min.js"></script>
+	<script src="../res/js/lib/select.js"></script>
+	<script src="../res/js/lib/base-loading.js"></script>
+</body>
+</html>

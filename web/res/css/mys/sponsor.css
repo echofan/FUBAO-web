@@ -1,0 +1,19 @@
+.footer{position:fixed;z-index:10;bottom:0;width:100%;border-top:1px solid rgba(0,0,0,0.1);display:table;height:50px;background: #F8F8F8;}
+.footer .bar-item.active{ color: #43AC43;}
+.footer .bar-item{display: table-cell;width: 20%;text-align:center;vertical-align: middle;height: inherit;color: #999;position: relative;font-size: 11px;}
+.footer .bar-item .icon{width: 24px;height: 24px;display: block;margin:3px auto;background:url(../../img/jlt.png) no-repeat;background-size:96px;}
+.footer .bar-item .bar-home{background-position:0 0;}
+.footer .bar-item .bar-timeline{background-position:-24px 0;}
+.footer .bar-item .bar-message{background-position:-48px 0;}
+.footer .bar-item .bar-user{background-position:-72px -24px;}
+.new-bar-publish{width:55px;height:55px;background:url(../../img/jia.png) no-repeat;background-size:55px;position:relative;display:block;left:0;top:-7px;margin:-12px auto;}
+
+.container{height: 50px;padding-top:15px;background: #fff;}
+.container .tab-box{width: 80%;margin:0 auto;height: 25px;line-height:25px;display:flex;}
+.container .tab-box li{float:left;text-align: center;font-size:14px;flex:1;}
+.container .tab-box li:nth-child(1){border:1px solid green;}
+.container .tab-box li:nth-child(2){border:1px solid green;border-left:none;border-right:none;}
+.container .tab-box li:nth-child(3){border:1px solid green;}
+.container .active{color:#fff;background:green;}
+.box-li{display:none;}
+ .box-active{display:block;}

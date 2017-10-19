@@ -1,0 +1,22 @@
+.head{width: 100%;height: 50px;}
+.head img{width: 40px;height: 40px;background-size:40px;display:inline-block;float:left;margin-top:5px;margin-left:10px;}
+.head_box{float:left;height: 50px;width: 80%;margin-top:2px;margin-left:10px;}
+.head_box span{display:block;margin-top:3px;}
+.prove_num{height: 30px;line-height: 30px;padding-left:10px;font-size:14px;background-color: #fff;border-bottom:2px solid #ccc;}
+.uls{width: 100%;background-color: #fff;}
+.uls li{padding:10px 10px 20px 10px;border-bottom:1px solid #ccc;display:block;height:auto;}
+.uls li .item_user{display: inline-block;float:left;}
+.uls li .item_user img{width: 40px;height: 40px;background-size: 40px;display: inline-block;}
+.uls li .item_detail{float:left;height: 100%;margin-left:10px;}
+
+small{border:1px solid green;border-radius:10px;color:green;padding:1px;}
+.item_detail_time{color:#ccc;}
+.item_detail_content{font-size:14px;margin-top:5px;}
+
+
+
+
+
+
+
+

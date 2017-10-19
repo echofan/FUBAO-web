@@ -1,0 +1,67 @@
+.index .container{}
+.index .head{background-color: #fff;height: 50px;width: 100%;box-sizing: border-box;padding:10px;}
+.index .head img{width: 30px;height: 30px;border-radius:50%;background-size: 100%;float:left;}
+.index .head .detail{float:left;margin-left:5px;}
+.index .head .detail span{display:block;}
+.index .content{background-color: #4CB034;color:#fff;font-size:13px;}
+.index .content .add_price{height: 50px;line-height: 50px;padding:0 10px;}
+.index .content .add_price div{float:left;}
+.index .content .add_price img{float:right;margin-top:7px;}
+.index .content .bring_price{height: 30px;line-height: 30px;padding:0 10px;}
+.index .content .total_price{height: 50px;padding:0 10px;}
+.index .content .total_price span{float:left;line-height:50px;font-size:20px;font-weight:600;}
+.index .content .total_price a{float:right;padding:3px 5px;border: 1px solid #fff;margin-top:13px;border-radius:5px;color:#fff;}
+.index .uls{width: 100%;background-color: #fff;}
+.index .uls li{width: 33.1%;background-color: #fff;height: 100px;float:left;text-align: center;}
+.index .uls li:nth-child(1){border-right:1px solid #ccc;border-bottom:1px solid #ccc;}
+.index .uls li:nth-child(2){border-right:1px solid #ccc;border-bottom:1px solid #ccc;}
+.index .uls li:nth-child(3){border-bottom:1px solid #ccc;}
+.index .uls li:nth-child(4){border-right:1px solid #ccc;}
+.index .uls li:nth-child(5){border-right:1px solid #ccc;}
+.index li div{margin:0 auto;text-align: center;margin-top:15px;}
+.index li div img{width: 40px;height: 40px;background-size: 40px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

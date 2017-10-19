@@ -1,0 +1,664 @@
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>搜索列表页</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="format-detection" content="telephone=no, address=no">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <style type="text/css">
+        .root[data-v-fa5550c8] {
+            font-family: PingFangSC-Light;
+            background: #f0f0f0;
+            height: 100vh
+        }
+
+        .hospital-address[data-v-fa5550c8] {
+            display: -webkit-flex;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin: 18px 20px 20px;
+            background: #f9f9f9;
+            border: 1px solid #dadada;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            height: 54px
+        }
+
+        .hospital-address .hospital-title[data-v-fa5550c8] {
+            font-size: 15px;
+            color: #333;
+            line-height: 54px;
+            margin-left: 14.5px
+        }
+
+        .hospital-address .hospital-position[data-v-fa5550c8] {
+            position: relative;
+            display: block;
+            -webkit-flex: 1;
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            padding-left: 37.5px;
+            line-height: 54px;
+            font-size: 15px;
+            color: #999
+        }
+
+        .hospital-address .hospital-position img[data-v-fa5550c8] {
+            position: absolute;
+            right: 10px;
+            top: 25px;
+            width: 12.5px
+        }
+
+        .hospital-name[data-v-fa5550c8] {
+            position: relative;
+            overflow: hidden;
+            display: -webkit-flex;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin: 18px 20px 20px;
+            background: #f9f9f9;
+            border: 1px solid #dadada;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            height: 54px
+        }
+
+        .hospital-name .hospital-title[data-v-fa5550c8] {
+            position: absolute;
+            left: 14.5px;
+            color: #333;
+            height: 54px;
+            line-height: 54px;
+            font-size: 15px
+        }
+
+        .hospital-name .hospital-position[data-v-fa5550c8] {
+            position: absolute;
+            top: 15px;
+            left: 115px;
+            -webkit-flex: 1s;
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            height: 54px;
+            font-size: 15px;
+            border: 0
+        }
+
+        .hospital-name .hospital-position input[data-v-fa5550c8] {
+            width: 187.5px;
+            line-height: 21px;
+            height: 21px;
+            outline: none;
+            border: 0;
+            background: #f9f9f9;
+            color: #999
+        }
+
+        .hospital-container[data-v-fa5550c8] {
+            background: #fff;
+            padding-bottom: 28.5px
+        }
+
+        .default-hospital[data-v-fa5550c8] {
+            padding-top: 24.5px
+        }
+
+        .default-hospital .input-hospital[data-v-fa5550c8] {
+            display: -webkit-flex;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin: 0 20px;
+            height: 55px;
+            line-height: 55px;
+            border-bottom: 1px solid #dadada;
+            border-top: 1px solid #dadada
+        }
+
+        .default-hospital .input-hospital .hospital-title[data-v-fa5550c8] {
+            font-size: 15px;
+            color: #666;
+            margin-left: 5px
+        }
+
+        .default-hospital .input-hospital .hospital-position[data-v-fa5550c8] {
+            color: orange;
+            font-size: 15px
+        }
+
+        .hospital-list[data-v-fa5550c8] {
+            padding: 0 20px;
+            background: #f0f0f0
+        }
+
+        .hospital-list .hospital-position[data-v-fa5550c8] {
+            height: 55px;
+            line-height: 55px;
+            font-size: 15px;
+            color: #666;
+            border-bottom: 1px solid #dadada;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            overflow: hidden
+        }
+        /*# sourceURL=/data/jenkins/.jenkins/workspace/static-aixinchou/src/views/raise/hospitalDetail/style.css */
+        /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9kYXRhL2plbmtpbnMvLmplbmtpbnMvd29ya3NwYWNlL3N0YXRpYy1haXhpbmNob3Uvc3JjL3ZpZXdzL3JhaXNlL2hvc3BpdGFsRGV0YWlsL3N0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQSx1QkFDRSw2QkFBOEIsQUFDOUIsbUJBQW9CLEFBQ3BCLFlBQWMsQ0FDZixBQUNELG1DQUNFLHFCQUFzQixBQUN0QixvQkFBcUIsQUFDckIsb0JBQXFCLEFBQ3JCLGFBQWMsQUFDZCxzQkFBNEIsQUFDNUIsbUJBQW9CLEFBQ3BCLHlCQUEwQixBQUMxQiwwQkFBMkIsQUFDbkIsa0JBQW1CLEFBQzNCLFdBQWEsQ0FDZCxBQUNELG1EQUNFLGVBQWdCLEFBQ2hCLFdBQWUsQUFDZixpQkFBa0IsQUFDbEIsa0JBQW9CLENBQ3JCLEFBQ0Qsc0RBQ0Usa0JBQW1CLEFBQ25CLGNBQWUsQUFDZixlQUFnQixBQUNoQixtQkFBb0IsQUFDaEIsV0FBWSxBQUNSLE9BQVEsQUFDaEIsb0JBQXFCLEFBQ3JCLGlCQUFrQixBQUNsQixlQUFnQixBQUNoQixVQUFlLENBQ2hCLEFBQ0QsMERBQ0Usa0JBQW1CLEFBQ25CLFdBQVksQUFDWixTQUFVLEFBQ1YsWUFBYyxDQUNmLEFBQ0QsZ0NBQ0Usa0JBQW1CLEFBQ25CLGdCQUFpQixBQUNqQixxQkFBc0IsQUFDdEIsb0JBQXFCLEFBQ3JCLG9CQUFxQixBQUNyQixhQUFjLEFBQ2Qsc0JBQTRCLEFBQzVCLG1CQUFvQixBQUNwQix5QkFBMEIsQUFDMUIsMEJBQTJCLEFBQ25CLGtCQUFtQixBQUMzQixXQUFhLENBQ2QsQUFDRCxnREFDRSxrQkFBbUIsQUFDbkIsWUFBYSxBQUNiLFdBQWUsQUFDZixZQUFhLEFBQ2IsaUJBQWtCLEFBQ2xCLGNBQWdCLENBQ2pCLEFBQ0QsbURBQ0Usa0JBQW1CLEFBQ25CLFNBQVUsQUFDVixXQUFZLEFBQ1osZ0JBQWlCLEFBQ2pCLG1CQUFvQixBQUNoQixXQUFZLEFBQ1IsT0FBUSxBQUNoQixZQUFhLEFBQ2IsZUFBZ0IsQUFDaEIsUUFBVSxDQUNYLEFBQ0QseURBQ0UsY0FBZSxBQUNmLGlCQUFrQixBQUNsQixZQUFhLEFBQ2IsYUFBYyxBQUNkLFNBQVksQUFDWixtQkFBb0IsQUFDcEIsVUFBWSxDQUNiLEFBQ0QscUNBQ0UsZ0JBQWlCLEFBQ2pCLHFCQUF1QixDQUN4QixBQUNELG1DQUNFLGtCQUFvQixDQUNyQixBQUNELG1EQUNFLHFCQUFzQixBQUN0QixvQkFBcUIsQUFDckIsb0JBQXFCLEFBQ3JCLGFBQWMsQUFDZCxjQUFzQixBQUN0QixZQUFhLEFBQ2IsaUJBQWtCLEFBQ2xCLGdDQUFpQyxBQUNqQyw0QkFBOEIsQ0FDL0IsQUFDRCxtRUFDRSxlQUFnQixBQUNoQixXQUFlLEFBQ2YsZUFBaUIsQ0FDbEIsQUFDRCxzRUFDRSxhQUFjLEFBQ2QsY0FBZ0IsQ0FDakIsQUFDRCxnQ0FDRSxlQUEyQixBQUMzQixrQkFBb0IsQ0FDckIsQUFDRCxtREFDRSxZQUFhLEFBQ2IsaUJBQWtCLEFBQ2xCLGVBQWdCLEFBQ2hCLFdBQWUsQUFDZixnQ0FBaUMsQUFDakMsbUJBQW9CLEFBQ3BCLHVCQUF3QixBQUN4QiwwQkFBMkIsQUFDM0IsZUFBaUIsQ0FDbEIiLCJmaWxlIjoic3R5bGUuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4ucm9vdFtkYXRhLXYtZmE1NTUwYzhdIHtcbiAgZm9udC1mYW1pbHk6IFBpbmdGYW5nU0MtTGlnaHQ7XG4gIGJhY2tncm91bmQ6ICNmMGYwZjA7XG4gIGhlaWdodDogMTAwdmg7XG59XG4uaG9zcGl0YWwtYWRkcmVzc1tkYXRhLXYtZmE1NTUwYzhdIHtcbiAgZGlzcGxheTogLXdlYmtpdC1mbGV4O1xuICBkaXNwbGF5OiAtd2Via2l0LWJveDtcbiAgZGlzcGxheTogLW1zLWZsZXhib3g7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIG1hcmdpbjogMThweCAyMHB4IDIwcHggMjBweDtcbiAgYmFja2dyb3VuZDogI2Y5ZjlmOTtcbiAgYm9yZGVyOiAxcHggc29saWQgI2RhZGFkYTtcbiAgLXdlYmtpdC1ib3JkZXItcmFkaXVzOiAzcHg7XG4gICAgICAgICAgYm9yZGVyLXJhZGl1czogM3B4O1xuICBoZWlnaHQ6IDU0cHg7XG59XG4uaG9zcGl0YWwtYWRkcmVzcyAuaG9zcGl0YWwtdGl0bGVbZGF0YS12LWZhNTU1MGM4XSB7XG4gIGZvbnQtc2l6ZTogMTVweDtcbiAgY29sb3I6ICMzMzMzMzM7XG4gIGxpbmUtaGVpZ2h0OiA1NHB4O1xuICBtYXJnaW4tbGVmdDogMTQuNXB4O1xufVxuLmhvc3BpdGFsLWFkZHJlc3MgLmhvc3BpdGFsLXBvc2l0aW9uW2RhdGEtdi1mYTU1NTBjOF0ge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICAtd2Via2l0LWZsZXg6IDE7XG4gIC13ZWJraXQtYm94LWZsZXg6IDE7XG4gICAgICAtbXMtZmxleDogMTtcbiAgICAgICAgICBmbGV4OiAxO1xuICBwYWRkaW5nLWxlZnQ6IDM3LjVweDtcbiAgbGluZS1oZWlnaHQ6IDU0cHg7XG4gIGZvbnQtc2l6ZTogMTVweDtcbiAgY29sb3I6ICM5OTk5OTk7XG59XG4uaG9zcGl0YWwtYWRkcmVzcyAuaG9zcGl0YWwtcG9zaXRpb24gaW1nW2RhdGEtdi1mYTU1NTBjOF0ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHJpZ2h0OiAxMHB4O1xuICB0b3A6IDI1cHg7XG4gIHdpZHRoOiAxMi41cHg7XG59XG4uaG9zcGl0YWwtbmFtZVtkYXRhLXYtZmE1NTUwYzhdIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiAtd2Via2l0LWZsZXg7XG4gIGRpc3BsYXk6IC13ZWJraXQtYm94O1xuICBkaXNwbGF5OiAtbXMtZmxleGJveDtcbiAgZGlzcGxheTogZmxleDtcbiAgbWFyZ2luOiAxOHB4IDIwcHggMjBweCAyMHB4O1xuICBiYWNrZ3JvdW5kOiAjZjlmOWY5O1xuICBib3JkZXI6IDFweCBzb2xpZCAjZGFkYWRhO1xuICAtd2Via2l0LWJvcmRlci1yYWRpdXM6IDNweDtcbiAgICAgICAgICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIGhlaWdodDogNTRweDtcbn1cbi5ob3NwaXRhbC1uYW1lIC5ob3NwaXRhbC10aXRsZVtkYXRhLXYtZmE1NTUwYzhdIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBsZWZ0OiAxNC41cHg7XG4gIGNvbG9yOiAjMzMzMzMzO1xuICBoZWlnaHQ6IDU0cHg7XG4gIGxpbmUtaGVpZ2h0OiA1NHB4O1xuICBmb250LXNpemU6IDE1cHg7XG59XG4uaG9zcGl0YWwtbmFtZSAuaG9zcGl0YWwtcG9zaXRpb25bZGF0YS12LWZhNTU1MGM4XSB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiAxNXB4O1xuICBsZWZ0OiAxMTVweDtcbiAgLXdlYmtpdC1mbGV4OiAxcztcbiAgLXdlYmtpdC1ib3gtZmxleDogMTtcbiAgICAgIC1tcy1mbGV4OiAxO1xuICAgICAgICAgIGZsZXg6IDE7XG4gIGhlaWdodDogNTRweDtcbiAgZm9udC1zaXplOiAxNXB4O1xuICBib3JkZXI6IDA7XG59XG4uaG9zcGl0YWwtbmFtZSAuaG9zcGl0YWwtcG9zaXRpb24gaW5wdXRbZGF0YS12LWZhNTU1MGM4XSB7XG4gIHdpZHRoOiAxODcuNXB4O1xuICBsaW5lLWhlaWdodDogMjFweDtcbiAgaGVpZ2h0OiAyMXB4O1xuICBvdXRsaW5lOiBub25lO1xuICBib3JkZXI6IDBweDtcbiAgYmFja2dyb3VuZDogI2Y5ZjlmOTtcbiAgY29sb3I6ICM5OTk7XG59XG4uaG9zcGl0YWwtY29udGFpbmVyW2RhdGEtdi1mYTU1NTBjOF0ge1xuICBiYWNrZ3JvdW5kOiAjZmZmO1xuICBwYWRkaW5nLWJvdHRvbTogMjguNXB4O1xufVxuLmRlZmF1bHQtaG9zcGl0YWxbZGF0YS12LWZhNTU1MGM4XSB7XG4gIHBhZGRpbmctdG9wOiAyNC41cHg7XG59XG4uZGVmYXVsdC1ob3NwaXRhbCAuaW5wdXQtaG9zcGl0YWxbZGF0YS12LWZhNTU1MGM4XSB7XG4gIGRpc3BsYXk6IC13ZWJraXQtZmxleDtcbiAgZGlzcGxheTogLXdlYmtpdC1ib3g7XG4gIGRpc3BsYXk6IC1tcy1mbGV4Ym94O1xuICBkaXNwbGF5OiBmbGV4O1xuICBtYXJnaW46IDAgMjBweCAwIDIwcHg7XG4gIGhlaWdodDogNTVweDtcbiAgbGluZS1oZWlnaHQ6IDU1cHg7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZGFkYWRhO1xuICBib3JkZXItdG9wOiAxcHggc29saWQgI2RhZGFkYTtcbn1cbi5kZWZhdWx0LWhvc3BpdGFsIC5pbnB1dC1ob3NwaXRhbCAuaG9zcGl0YWwtdGl0bGVbZGF0YS12LWZhNTU1MGM4XSB7XG4gIGZvbnQtc2l6ZTogMTVweDtcbiAgY29sb3I6ICM2NjY2NjY7XG4gIG1hcmdpbi1sZWZ0OiA1cHg7XG59XG4uZGVmYXVsdC1ob3NwaXRhbCAuaW5wdXQtaG9zcGl0YWwgLmhvc3BpdGFsLXBvc2l0aW9uW2RhdGEtdi1mYTU1NTBjOF0ge1xuICBjb2xvcjogb3JhbmdlO1xuICBmb250LXNpemU6IDE1cHg7XG59XG4uaG9zcGl0YWwtbGlzdFtkYXRhLXYtZmE1NTUwYzhdIHtcbiAgcGFkZGluZzogMHB4IDIwcHggMHB4IDIwcHg7XG4gIGJhY2tncm91bmQ6ICNmMGYwZjA7XG59XG4uaG9zcGl0YWwtbGlzdCAuaG9zcGl0YWwtcG9zaXRpb25bZGF0YS12LWZhNTU1MGM4XSB7XG4gIGhlaWdodDogNTVweDtcbiAgbGluZS1oZWlnaHQ6IDU1cHg7XG4gIGZvbnQtc2l6ZTogMTVweDtcbiAgY29sb3I6ICM2NjY2NjY7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZGFkYWRhO1xuICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcbiAgLW8tdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG4gIG92ZXJmbG93OiBoaWRkZW47XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */
+    </style>
+    <style type="text/css">
+        .match-hospital-name {
+            color: orange
+        }
+        /*# sourceURL=/data/jenkins/.jenkins/workspace/static-aixinchou/src/views/raise/hospitalDetail/app.vue */
+        /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9kYXRhL2plbmtpbnMvLmplbmtpbnMvd29ya3NwYWNlL3N0YXRpYy1haXhpbmNob3Uvc3JjL3ZpZXdzL3JhaXNlL2hvc3BpdGFsRGV0YWlsL2FwcC52dWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0EscUJBQ0UsWUFBYyxDQUNmIiwiZmlsZSI6ImFwcC52dWUiLCJzb3VyY2VzQ29udGVudCI6WyJcbi5tYXRjaC1ob3NwaXRhbC1uYW1lIHtcbiAgY29sb3I6IG9yYW5nZTtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */
+    </style>
+    <style type="text/css">
+        .time-root[data-v-360b9307] {
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0
+        }
+
+        .time-root .shade[data-v-360b9307] {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, .6);
+            z-index: 333
+        }
+
+        .time-root .main[data-v-360b9307] {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 444;
+            background: #fff
+        }
+
+        .time-root .main .header[data-v-360b9307] {
+            position: relative;
+            z-index: 50;
+            height: 56.5px;
+            border-bottom: 1px solid #dadada;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            margin-bottom: 1px;
+            overflow: hidden
+        }
+
+        .time-root .main .header .picker[data-v-360b9307] {
+            overflow: hidden;
+            position: relative
+        }
+
+        .time-root .main .header .picker p[data-v-360b9307] {
+            float: left;
+            height: 54px;
+            line-height: 59px;
+            font-size: 15px;
+            text-align: center;
+            width: 75px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis
+        }
+
+        .time-root .main .header .picker .border[data-v-360b9307] {
+            display: block;
+            width: 75px;
+            height: 2.5px;
+            background: #ffba00;
+            -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+            position: absolute;
+            bottom: 0;
+            left: 0
+        }
+
+        .time-root .main .header .picker .transform0[data-v-360b9307] {
+            -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+            transform: translateX(0)
+        }
+
+        .time-root .main .header .picker .transform1[data-v-360b9307] {
+            -webkit-transform: translateX(75px);
+            -ms-transform: translateX(75px);
+            transform: translateX(75px)
+        }
+
+        .time-root .main .header .picker .transform2[data-v-360b9307] {
+            -webkit-transform: translateX(150px);
+            -ms-transform: translateX(150px);
+            transform: translateX(150px)
+        }
+
+        .time-root .main .header .right[data-v-360b9307] {
+            font-size: 15px;
+            color: #ffba00;
+            padding: 0 25px;
+            height: 100%;
+            line-height: 56.5px
+        }
+
+        .time-root .main .header .unable[data-v-360b9307] {
+            color: #999
+        }
+
+        .time-root .selector[data-v-360b9307] {
+            overflow: hidden;
+            overflow-y: scroll;
+            position: relative;
+            height: 300px
+        }
+
+        .time-root .selector .item[data-v-360b9307] {
+            height: 40px;
+            padding: 0 15px;
+            line-height: 40px;
+            font-size: 15px;
+            color: #666;
+            background: #fff
+        }
+
+        .time-root .selector .item[data-v-360b9307]:active {
+            background: rgba(0, 0, 0, .1)
+        }
+
+        .time-root .selector .active[data-v-360b9307] {
+            color: #ffba00
+        }
+
+        .fade-enter-active[data-v-360b9307],
+        .fade-leave-active[data-v-360b9307] {
+            -webkit-transition: opacity .3s;
+            transition: opacity .3s
+        }
+
+        .fade-enter[data-v-360b9307],
+        .fade-leave-active[data-v-360b9307] {
+            opacity: 0
+        }
+
+        .slide-enter-active[data-v-360b9307] {
+            -webkit-animation: slide-in .3s ease-in;
+            animation: slide-in .3s ease-in
+        }
+
+        .slide-leave-active[data-v-360b9307] {
+            -webkit-animation: slide-out .3s ease-out;
+            animation: slide-out .3s ease-out
+        }
+
+        @-webkit-keyframes slide-in {
+            0% {
+                -webkit-transform: translateY(100%);
+                transform: translateY(100%)
+            }
+            to {
+                -webkit-transform: translateY(0);
+                transform: translateY(0)
+            }
+        }
+
+        @keyframes slide-in {
+            0% {
+                -webkit-transform: translateY(100%);
+                transform: translateY(100%)
+            }
+            to {
+                -webkit-transform: translateY(0);
+                transform: translateY(0)
+            }
+        }
+
+        @-webkit-keyframes slide-out {
+            0% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0)
+            }
+            to {
+                -webkit-transform: translateY(100%);
+                transform: translateY(100%)
+            }
+        }
+
+        @keyframes slide-out {
+            0% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0)
+            }
+            to {
+                -webkit-transform: translateY(100%);
+                transform: translateY(100%)
+            }
+        }
+        /*# sourceURL=/data/jenkins/.jenkins/workspace/static-aixinchou/src/components/addressPicker/style.less */
+        /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9kYXRhL2plbmtpbnMvLmplbmtpbnMvd29ya3NwYWNlL3N0YXRpYy1haXhpbmNob3Uvc3JjL2NvbXBvbmVudHMvYWRkcmVzc1BpY2tlci9zdHlsZS5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBLDRCQUNFLGVBQWdCLEFBQ2hCLFlBQWEsQUFDYixNQUFPLEFBQ1AsU0FBVSxBQUNWLE9BQVEsQUFDUixPQUFTLENBQ1YsQUFDRCxtQ0FDRSxrQkFBbUIsQUFDbkIsTUFBTyxBQUNQLFNBQVUsQUFDVixPQUFRLEFBQ1IsUUFBUyxBQUNULDBCQUErQixBQUMvQixXQUFhLENBQ2QsQUFDRCxrQ0FDRSxrQkFBbUIsQUFDbkIsU0FBVSxBQUNWLE9BQVEsQUFDUixRQUFTLEFBQ1QsWUFBYSxBQUNiLGVBQWlCLENBQ2xCLEFBQ0QsMENBQ0Usa0JBQW1CLEFBQ25CLFdBQVksQUFDWixjQUFlLEFBQ2YsZ0NBQWlDLEFBQ2pDLG9CQUFxQixBQUNyQixxQkFBc0IsQUFDdEIsb0JBQXFCLEFBQ3JCLGFBQWMsQUFDZCx5QkFBMEIsQUFDMUIsMkJBQTRCLEFBQ3hCLHNCQUF1QixBQUNuQixtQkFBb0IsQUFDNUIseUJBQTBCLEFBQzFCLHNDQUF1QyxBQUNuQyxzQkFBdUIsQUFDbkIsOEJBQStCLEFBQ3ZDLGtCQUFtQixBQUNuQixlQUFpQixDQUNsQixBQUNELGtEQUNFLGdCQUFpQixBQUNqQixpQkFBbUIsQ0FDcEIsQUFDRCxvREFDRSxXQUFZLEFBQ1osWUFBYSxBQUNiLGlCQUFrQixBQUNsQixlQUFnQixBQUNoQixrQkFBbUIsQUFDbkIsV0FBWSxBQUNaLG1CQUFvQixBQUNwQixnQkFBaUIsQUFDakIsc0JBQXdCLENBQ3pCLEFBQ0QsMERBQ0UsY0FBZSxBQUNmLFdBQVksQUFDWixhQUFjLEFBQ2QsbUJBQW9CLEFBQ3BCLGdDQUFpQyxBQUNqQyx3QkFBeUIsQUFDekIsa0JBQW1CLEFBQ25CLFNBQVUsQUFDVixNQUFRLENBQ1QsQUFDRCw4REFDRSxnQ0FBbUMsQUFDL0IsNEJBQStCLEFBQzNCLHVCQUEyQixDQUNwQyxBQUNELDhEQUNFLG1DQUFvQyxBQUNoQywrQkFBZ0MsQUFDNUIsMEJBQTRCLENBQ3JDLEFBQ0QsOERBQ0Usb0NBQXFDLEFBQ2pDLGdDQUFpQyxBQUM3QiwyQkFBNkIsQ0FDdEMsQUFDRCxpREFDRSxlQUFnQixBQUNoQixjQUFlLEFBQ2YsZUFBZ0IsQUFDaEIsWUFBYSxBQUNiLGtCQUFvQixDQUNyQixBQUNELGtEQUNFLFVBQVksQ0FDYixBQUNELHNDQUNFLGdCQUFpQixBQUNqQixrQkFBbUIsQUFDbkIsa0JBQW1CLEFBQ25CLFlBQWMsQ0FDZixBQUNELDRDQUNFLFlBQWEsQUFDYixlQUFnQixBQUNoQixpQkFBa0IsQUFDbEIsZUFBZ0IsQUFDaEIsV0FBWSxBQUNaLGVBQWlCLENBQ2xCLEFBQ0QsbURBQ0UseUJBQStCLENBQ2hDLEFBQ0QsOENBQ0UsYUFBZSxDQUNoQixBQUNELHdFQUVFLCtCQUFpQyxBQUNqQyxzQkFBeUIsQ0FDMUIsQUFDRCxpRUFFRSxTQUFXLENBQ1osQUFDRCxxQ0FDRSx1Q0FBeUMsQUFDakMsOEJBQWlDLENBQzFDLEFBQ0QscUNBQ0UseUNBQTJDLEFBQ25DLGdDQUFtQyxDQUM1QyxBQUNELDRCQUNBLEdBQ0ksbUNBQW9DLEFBQzVCLDBCQUE0QixDQUN2QyxBQUNELEdBQ0ksZ0NBQWtDLEFBQzFCLHVCQUEwQixDQUNyQyxDQUNBLEFBQ0Qsb0JBQ0EsR0FDSSxtQ0FBb0MsQUFDNUIsMEJBQTRCLENBQ3ZDLEFBQ0QsR0FDSSxnQ0FBa0MsQUFDMUIsdUJBQTBCLENBQ3JDLENBQ0EsQUFDRCw2QkFDQSxHQUNJLGdDQUFrQyxBQUMxQix1QkFBMEIsQ0FDckMsQUFDRCxHQUNJLG1DQUFvQyxBQUM1QiwwQkFBNEIsQ0FDdkMsQ0FDQSxBQUNELHFCQUNBLEdBQ0ksZ0NBQWtDLEFBQzFCLHVCQUEwQixDQUNyQyxBQUNELEdBQ0ksbUNBQW9DLEFBQzVCLDBCQUE0QixDQUN2QyxDQUNBIiwiZmlsZSI6InN0eWxlLmxlc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi50aW1lLXJvb3RbZGF0YS12LTM2MGI5MzA3XSB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgei1pbmRleDogMTAwO1xuICB0b3A6IDA7XG4gIGJvdHRvbTogMDtcbiAgbGVmdDogMDtcbiAgcmlnaHQ6IDA7XG59XG4udGltZS1yb290IC5zaGFkZVtkYXRhLXYtMzYwYjkzMDddIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDA7XG4gIGJvdHRvbTogMDtcbiAgbGVmdDogMDtcbiAgcmlnaHQ6IDA7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC42KTtcbiAgei1pbmRleDogMzMzO1xufVxuLnRpbWUtcm9vdCAubWFpbltkYXRhLXYtMzYwYjkzMDddIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBib3R0b206IDA7XG4gIGxlZnQ6IDA7XG4gIHJpZ2h0OiAwO1xuICB6LWluZGV4OiA0NDQ7XG4gIGJhY2tncm91bmQ6ICNmZmY7XG59XG4udGltZS1yb290IC5tYWluIC5oZWFkZXJbZGF0YS12LTM2MGI5MzA3XSB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgei1pbmRleDogNTA7XG4gIGhlaWdodDogNTYuNXB4O1xuICBib3JkZXItYm90dG9tOiAxcHggI2RhZGFkYSBzb2xpZDtcbiAgZGlzcGxheTogLXdlYmtpdC1ib3g7XG4gIGRpc3BsYXk6IC13ZWJraXQtZmxleDtcbiAgZGlzcGxheTogLW1zLWZsZXhib3g7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIC13ZWJraXQtYm94LWFsaWduOiBjZW50ZXI7XG4gIC13ZWJraXQtYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgIC1tcy1mbGV4LWFsaWduOiBjZW50ZXI7XG4gICAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgLXdlYmtpdC1ib3gtcGFjazoganVzdGlmeTtcbiAgLXdlYmtpdC1qdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gICAgICAtbXMtZmxleC1wYWNrOiBqdXN0aWZ5O1xuICAgICAgICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgbWFyZ2luLWJvdHRvbTogMXB4O1xuICBvdmVyZmxvdzogaGlkZGVuO1xufVxuLnRpbWUtcm9vdCAubWFpbiAuaGVhZGVyIC5waWNrZXJbZGF0YS12LTM2MGI5MzA3XSB7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cbi50aW1lLXJvb3QgLm1haW4gLmhlYWRlciAucGlja2VyIHBbZGF0YS12LTM2MGI5MzA3XSB7XG4gIGZsb2F0OiBsZWZ0O1xuICBoZWlnaHQ6IDU0cHg7XG4gIGxpbmUtaGVpZ2h0OiA1OXB4O1xuICBmb250LXNpemU6IDE1cHg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgd2lkdGg6IDc1cHg7XG4gIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xufVxuLnRpbWUtcm9vdCAubWFpbiAuaGVhZGVyIC5waWNrZXIgLmJvcmRlcltkYXRhLXYtMzYwYjkzMDddIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIHdpZHRoOiA3NXB4O1xuICBoZWlnaHQ6IDIuNXB4O1xuICBiYWNrZ3JvdW5kOiAjZmZiYTAwO1xuICAtd2Via2l0LXRyYW5zaXRpb246IGFsbCAuM3MgZWFzZTtcbiAgdHJhbnNpdGlvbjogYWxsIC4zcyBlYXNlO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGJvdHRvbTogMDtcbiAgbGVmdDogMDtcbn1cbi50aW1lLXJvb3QgLm1haW4gLmhlYWRlciAucGlja2VyIC50cmFuc2Zvcm0wW2RhdGEtdi0zNjBiOTMwN10ge1xuICAtd2Via2l0LXRyYW5zZm9ybTogdHJhbnNsYXRlWCgwcHgpO1xuICAgICAgLW1zLXRyYW5zZm9ybTogdHJhbnNsYXRlWCgwcHgpO1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgwcHgpO1xufVxuLnRpbWUtcm9vdCAubWFpbiAuaGVhZGVyIC5waWNrZXIgLnRyYW5zZm9ybTFbZGF0YS12LTM2MGI5MzA3XSB7XG4gIC13ZWJraXQtdHJhbnNmb3JtOiB0cmFuc2xhdGVYKDc1cHgpO1xuICAgICAgLW1zLXRyYW5zZm9ybTogdHJhbnNsYXRlWCg3NXB4KTtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoNzVweCk7XG59XG4udGltZS1yb290IC5tYWluIC5oZWFkZXIgLnBpY2tlciAudHJhbnNmb3JtMltkYXRhLXYtMzYwYjkzMDddIHtcbiAgLXdlYmtpdC10cmFuc2Zvcm06IHRyYW5zbGF0ZVgoMTUwcHgpO1xuICAgICAgLW1zLXRyYW5zZm9ybTogdHJhbnNsYXRlWCgxNTBweCk7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKDE1MHB4KTtcbn1cbi50aW1lLXJvb3QgLm1haW4gLmhlYWRlciAucmlnaHRbZGF0YS12LTM2MGI5MzA3XSB7XG4gIGZvbnQtc2l6ZTogMTVweDtcbiAgY29sb3I6ICNmZmJhMDA7XG4gIHBhZGRpbmc6IDAgMjVweDtcbiAgaGVpZ2h0OiAxMDAlO1xuICBsaW5lLWhlaWdodDogNTYuNXB4O1xufVxuLnRpbWUtcm9vdCAubWFpbiAuaGVhZGVyIC51bmFibGVbZGF0YS12LTM2MGI5MzA3XSB7XG4gIGNvbG9yOiAjOTk5O1xufVxuLnRpbWUtcm9vdCAuc2VsZWN0b3JbZGF0YS12LTM2MGI5MzA3XSB7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIG92ZXJmbG93LXk6IHNjcm9sbDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBoZWlnaHQ6IDMwMHB4O1xufVxuLnRpbWUtcm9vdCAuc2VsZWN0b3IgLml0ZW1bZGF0YS12LTM2MGI5MzA3XSB7XG4gIGhlaWdodDogNDBweDtcbiAgcGFkZGluZzogMCAxNXB4O1xuICBsaW5lLWhlaWdodDogNDBweDtcbiAgZm9udC1zaXplOiAxNXB4O1xuICBjb2xvcjogIzY2NjtcbiAgYmFja2dyb3VuZDogI2ZmZjtcbn1cbi50aW1lLXJvb3QgLnNlbGVjdG9yIC5pdGVtW2RhdGEtdi0zNjBiOTMwN106YWN0aXZlIHtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjEpO1xufVxuLnRpbWUtcm9vdCAuc2VsZWN0b3IgLmFjdGl2ZVtkYXRhLXYtMzYwYjkzMDddIHtcbiAgY29sb3I6ICNmZmJhMDA7XG59XG4uZmFkZS1lbnRlci1hY3RpdmVbZGF0YS12LTM2MGI5MzA3XSxcbi5mYWRlLWxlYXZlLWFjdGl2ZVtkYXRhLXYtMzYwYjkzMDddIHtcbiAgLXdlYmtpdC10cmFuc2l0aW9uOiBvcGFjaXR5IDAuM3M7XG4gIHRyYW5zaXRpb246IG9wYWNpdHkgMC4zcztcbn1cbi5mYWRlLWVudGVyW2RhdGEtdi0zNjBiOTMwN10sXG4uZmFkZS1sZWF2ZS1hY3RpdmVbZGF0YS12LTM2MGI5MzA3XSB7XG4gIG9wYWNpdHk6IDA7XG59XG4uc2xpZGUtZW50ZXItYWN0aXZlW2RhdGEtdi0zNjBiOTMwN10ge1xuICAtd2Via2l0LWFuaW1hdGlvbjogc2xpZGUtaW4gMC4zcyBlYXNlLWluO1xuICAgICAgICAgIGFuaW1hdGlvbjogc2xpZGUtaW4gMC4zcyBlYXNlLWluO1xufVxuLnNsaWRlLWxlYXZlLWFjdGl2ZVtkYXRhLXYtMzYwYjkzMDddIHtcbiAgLXdlYmtpdC1hbmltYXRpb246IHNsaWRlLW91dCAwLjNzIGVhc2Utb3V0O1xuICAgICAgICAgIGFuaW1hdGlvbjogc2xpZGUtb3V0IDAuM3MgZWFzZS1vdXQ7XG59XG5ALXdlYmtpdC1rZXlmcmFtZXMgc2xpZGUtaW4ge1xuMCUge1xuICAgIC13ZWJraXQtdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDEwMCUpO1xuICAgICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDEwMCUpO1xufVxuMTAwJSB7XG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMCUpO1xuICAgICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDAlKTtcbn1cbn1cbkBrZXlmcmFtZXMgc2xpZGUtaW4ge1xuMCUge1xuICAgIC13ZWJraXQtdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDEwMCUpO1xuICAgICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDEwMCUpO1xufVxuMTAwJSB7XG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMCUpO1xuICAgICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDAlKTtcbn1cbn1cbkAtd2Via2l0LWtleWZyYW1lcyBzbGlkZS1vdXQge1xuMCUge1xuICAgIC13ZWJraXQtdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDAlKTtcbiAgICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgwJSk7XG59XG4xMDAlIHtcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogdHJhbnNsYXRlWSgxMDAlKTtcbiAgICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxMDAlKTtcbn1cbn1cbkBrZXlmcmFtZXMgc2xpZGUtb3V0IHtcbjAlIHtcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogdHJhbnNsYXRlWSgwJSk7XG4gICAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMCUpO1xufVxuMTAwJSB7XG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMTAwJSk7XG4gICAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMTAwJSk7XG59XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */
+    </style>
+</head>
+
+<body>
+    <div style="overflow:hidden; width:0px; height:0; margin:0 auto; position:absolute; top:-800px"><img src="//static-mt.oss-cn-beijing.aliyuncs.com/img/common/cf-logo.png"></div>
+    <div id="app">
+        <div data-v-fa5550c8="" class="root">
+            <div data-v-fa5550c8="" class="hospital-container">
+                <div data-v-fa5550c8="" class="hospital-address">
+                    <div data-v-fa5550c8="" class="hospital-title">医院所在地</div>
+                    <div data-v-fa5550c8="" class="hospital-position"><span data-v-fa5550c8="">北京市 北京市</span> <img data-v-fa5550c8="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAANCAYAAABcrsXuAAAAAXNSR0IArs4c6QAAAHNJREFUOBG11MENgDAIBVDZzBWYyLoQjIhiojFKKWjLhQv/vxvAzEVElmnQAMAK2j0KUgARy4GMgE5Auy+kJ3QHXkgP6AmYyB/IAqrIF6gGuEgG8oAmEoFaQAjxoAgQRiwoCmg2NfoZiEh0p4LZ4x2Ys5kNE3ZhCSbuyK8AAAAASUVORK5CYII="
+                            alt=""></div>
+                </div>
+                <div data-v-fa5550c8="" class="hospital-name">
+                    <div data-v-fa5550c8="" class="hospital-title">医院名称</div>
+                    <div data-v-fa5550c8="" class="hospital-position"><input data-v-fa5550c8="" type="text" placeholder="天坛妇科医院"></div>
+                </div>
+            </div>
+            <div data-v-fa5550c8="" class="default-hospital">
+                <div data-v-3af11072="" data-v-fa5550c8="">
+                    <div data-v-3af11072="" class="div-scroll-inner" style="transform: translate3d(0px, 0px, 0px);">
+                        <!---->
+                        <div data-v-fa5550c8="" data-v-3af11072="" class="hospital-list">
+                            <div data-v-fa5550c8="" data-v-3af11072="" class="hospital-position"><span class="match-hospital-name">北京武警耳鼻喉第三医院</span></div>
+                        </div>
+                        <!---->
+                    </div>
+                </div>
+            </div>
+            <div data-v-360b9307="" data-v-fa5550c8="" class="time-root" style="display: none;">
+                <div data-v-360b9307="" class="shade" style="display: none;"></div>
+                <div data-v-360b9307="" class="main" style="display: none;">
+                    <div data-v-360b9307="" class="header">
+                        <div data-v-360b9307="" class="picker">
+                            <p data-v-360b9307="">省份</p>
+                            <p data-v-360b9307="" class="unable">城市</p>
+                            <!---->
+                            <div data-v-360b9307="" class="border"></div>
+                        </div>
+                        <div data-v-360b9307="" class="right unable">确定</div>
+                    </div>
+                    <div data-v-360b9307="" class="selector">
+                        <p data-v-360b9307="" class="item">
+                            北京市
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            天津市
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            河北省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            山西省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            内蒙古自治区
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            辽宁省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            吉林省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            黑龙江省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            上海市
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            江苏省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            浙江省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            安徽省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            福建省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            江西省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            山东省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            河南省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            湖北省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            湖南省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            广东省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            广西壮族自治区
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            海南省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            重庆市
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            四川省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            贵州省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            云南省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            西藏自治区
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            陕西省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            甘肃省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            青海省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            宁夏回族自治区
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            新疆维吾尔自治区
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            台湾省
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            香港特别行政区
+                        </p>
+                        <p data-v-360b9307="" class="item">
+                            澳门特别行政区
+                        </p>
+                    </div>
+                    <!---->
+                    <!---->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-v-6f88dc41="" transition="fade" class="overlay" style="display: none;">
+        <div data-v-6f88dc41="" class="dialog" style="display: none;">
+            <p data-v-6f88dc41="" class="title"><strong data-v-6f88dc41=""></strong></p>
+            <p data-v-6f88dc41="" class="content"></p> <a data-v-6f88dc41="" href="javascript:;">确定</a></div>
+    </div>
+    <div data-v-4a954225="" class="overlay" style="display: none;">
+        <div data-v-4a954225="" class="dialog" style="display: none;">
+            <p data-v-4a954225="" class="title"><strong data-v-4a954225=""></strong></p>
+            <p data-v-4a954225="" class="info"></p>
+            <div data-v-4a954225="" class="div-bottom"><a data-v-4a954225="" href="javascript:;" class="cancel">取消</a> <a data-v-4a954225="" href="javascript:;">确定</a></div>
+        </div>
+    </div>
+    <div data-v-326f2449="" transition="fade" class="tips-wrap" style="display: none;"><span data-v-326f2449="" class="tips" style="display: none;"></span></div>
+    <div data-v-35a5564e="" data-v-061a4994=""
+        transition="fade" class="overlay" title="验证手机号" style="display: none;">
+        <div data-v-35a5564e="" class="dialog" style="display: none;">
+            <div data-v-061a4994="" class="login-dialog">
+                <div data-v-061a4994="" class="login-header">
+                    <h1 data-v-061a4994="">验证手机号</h1> <a data-v-061a4994="" href="javascript:;" class="close-button"></a></div>
+                <div data-v-0bfad60e=""
+                    data-v-061a4994="" class="cf-login-wrap">
+                    <div data-v-0bfad60e="" class="phone-wrap"><span data-v-0bfad60e="" class="phone-icon"></span><input data-v-0bfad60e="" type="number" pattern="[0-9]*"
+                            placeholder="请输入手机号"></div>
+                    <div data-v-0bfad60e="" class="verifycode-wrap">
+                        <div data-v-0bfad60e="" class="key-icon"></div> <input data-v-0bfad60e="" type="number" pattern="[0-9]*" placeholder="请输入验证码">
+                        <div data-v-0bfad60e=""
+                            class="get-code">获取验证码</div>
+                    </div>
+                    <div data-v-0bfad60e="" class="phone-tip">收不到验证码？拨打<a data-v-0bfad60e="" href="tel:400-686-1179">4006861179</a> 立即为您查询</div> <a data-v-0bfad60e=""
+                        href="javascript:;" class="verify-button">验证</a></div>
+            </div>
+        </div>
+    </div>
+    <div data-v-308b51a1="" transition="fade" class="overlay" style="display: none;">
+        <div data-v-308b51a1="" class="dialog">
+            <svg data-v-308b51a1="" version="1.1" width="40" height="40" viewBox="0 0 64 64" class="icon">
+                <g data-v-308b51a1="" stroke-width="4" stroke-linecap="round">
+                    <line data-v-308b51a1="" y1="17" y2="29" transform="translate(32,32) rotate(180)">
+                        <animate data-v-308b51a1="" attributeName="stroke-opacity" dur="750ms" values="1;.85;.7;.65;.55;.45;.35;.25;.15;.1;0;1"
+                            repeatCount="indefinite"></animate>
+                    </line>
+                    <line data-v-308b51a1="" y1="17" y2="29" transform="translate(32,32) rotate(210)">
+                        <animate data-v-308b51a1="" attributeName="stroke-opacity" dur="750ms" values="0;1;.85;.7;.65;.55;.45;.35;.25;.15;.1;0"
+                            repeatCount="indefinite"></animate>
+                    </line>
+                    <line data-v-308b51a1="" y1="17" y2="29" transform="translate(32,32) rotate(240)">
+                        <animate data-v-308b51a1="" attributeName="stroke-opacity" dur="750ms" values=".1;0;1;.85;.7;.65;.55;.45;.35;.25;.15;.1"
+                            repeatCount="indefinite"></animate>
+                    </line>
+                    <line data-v-308b51a1="" y1="17" y2="29" transform="translate(32,32) rotate(270)">
+                        <animate data-v-308b51a1="" attributeName="stroke-opacity" dur="750ms" values=".15;.1;0;1;.85;.7;.65;.55;.45;.35;.25;.15"
+                            repeatCount="indefinite"></animate>
+                    </line>
+                    <line data-v-308b51a1="" y1="17" y2="29" transform="translate(32,32) rotate(300)">
+                        <animate data-v-308b51a1="" attributeName="stroke-opacity" dur="750ms" values=".25;.15;.1;0;1;.85;.7;.65;.55;.45;.35;.25"
+                            repeatCount="indefinite"></animate>
+                    </line>
+                    <line data-v-308b51a1="" y1="17" y2="29" transform="translate(32,32) rotate(330)">
+                        <animate data-v-308b51a1="" attributeName="stroke-opacity" dur="750ms" values=".35;.25;.15;.1;0;1;.85;.7;.65;.55;.45;.35"
+                            repeatCount="indefinite"></animate>
+                    </line>
+                    <line data-v-308b51a1="" y1="17" y2="29" transform="translate(32,32) rotate(0)">
+                        <animate data-v-308b51a1="" attributeName="stroke-opacity" dur="750ms" values=".45;.35;.25;.15;.1;0;1;.85;.7;.65;.55;.45"
+                            repeatCount="indefinite"></animate>
+                    </line>
+                    <line data-v-308b51a1="" y1="17" y2="29" transform="translate(32,32) rotate(30)">
+                        <animate data-v-308b51a1="" attributeName="stroke-opacity" dur="750ms" values=".55;.45;.35;.25;.15;.1;0;1;.85;.7;.65;.55"
+                            repeatCount="indefinite"></animate>
+                    </line>
+                    <line data-v-308b51a1="" y1="17" y2="29" transform="translate(32,32) rotate(60)">
+                        <animate data-v-308b51a1="" attributeName="stroke-opacity" dur="750ms" values=".65;.55;.45;.35;.25;.15;.1;0;1;.85;.7;.65"
+                            repeatCount="indefinite"></animate>
+                    </line>
+                    <line data-v-308b51a1="" y1="17" y2="29" transform="translate(32,32) rotate(90)">
+                        <animate data-v-308b51a1="" attributeName="stroke-opacity" dur="750ms" values=".7;.65;.55;.45;.35;.25;.15;.1;0;1;.85;.7"
+                            repeatCount="indefinite"></animate>
+                    </line>
+                    <line data-v-308b51a1="" y1="17" y2="29" transform="translate(32,32) rotate(120)">
+                        <animate data-v-308b51a1="" attributeName="stroke-opacity" dur="750ms" values=".85;.7;.65;.55;.45;.35;.25;.15;.1;0;1;.85"
+                            repeatCount="indefinite"></animate>
+                    </line>
+                    <line data-v-308b51a1="" y1="17" y2="29" transform="translate(32,32) rotate(150)">
+                        <animate data-v-308b51a1="" attributeName="stroke-opacity" dur="750ms" values="1;.85;.7;.65;.55;.45;.35;.25;.15;.1;0;1"
+                            repeatCount="indefinite"></animate>
+                    </line>
+                </g>
+            </svg>
+            <p data-v-308b51a1="" class="title">加载中...</p>
+            <p data-v-308b51a1="" class="title"></p>
+        </div>
+    </div>
+    <div data-v-69fa952d="" class="rd-preview-wrapper" style="display: none;">
+        <div data-v-69fa952d="" class="rd-preview-close">
+            <p data-v-69fa952d="" class="rd-preview-close-icon">关闭</p>
+        </div>
+        <!---->
+        <div data-v-69fa952d="" class="rd-preview-title">
+            1/0
+        </div>
+        <div data-v-69fa952d="" class="rd-preview-nav-left">
+            <div data-v-69fa952d=""></div>
+        </div>
+        <div data-v-69fa952d="" class="rd-preview-nav-right">
+            <div data-v-69fa952d=""></div>
+        </div>
+    </div>
+    <div data-v-35a5564e="" data-v-ab19b61c="" transition="fade" class="overlay" style="display: none;">
+        <div data-v-35a5564e="" class="dialog" style="display: none;">
+            <div data-v-ab19b61c="" class="dialog-raise-tip">
+                <p data-v-ab19b61c="" class="title">筹款须知</p>
+                <div data-v-ab19b61c="" class="content">
+                    <ul data-v-ab19b61c="">
+                        <li data-v-ab19b61c="" class="spec">筹款无论是否达到目标金额，都可以提现，筹多少给多少</li>
+                    </ul>
+                    <p data-v-ab19b61c="" class="subtitle">收款资格</p>
+                    <ul data-v-ab19b61c="">
+                        <li data-v-ab19b61c="">收款人必须是患者本人，或患者直系亲属（配偶／父母／子女／亲兄弟姐妹）</li>
+                    </ul>
+                    <p data-v-ab19b61c="" class="subtitle">筹款发起</p>
+                    <ul data-v-ab19b61c="">
+                        <li data-v-ab19b61c="">1. 在线填写筹款信息，填写完毕后即可开始筹款；</li>
+                        <li data-v-ab19b61c="">2. 在线完善患者身份验证、收款人身份验证、诊断证明后方可提交审核，审核通过后，方可提现；</li>
+                    </ul>
+                    <p data-v-ab19b61c="" class="subtitle">筹款结束</p>
+                    <ul data-v-ab19b61c="">
+                        <li data-v-ab19b61c="">1. 达到目标金额，或筹款开始已满30天，筹款自动结束；</li>
+                        <li data-v-ab19b61c="">2. 筹款过程中，可随时联系工作人员提前结束，进入提现环节；</li>
+                    </ul>
+                    <p data-v-ab19b61c="" class="subtitle">提现流程</p>
+                    <ul data-v-ab19b61c="">
+                        <li data-v-ab19b61c="">1. 筹款结束后，善款将在2-4个工作日内汇入收款人银行账户；</li>
+                        <li data-v-ab19b61c="" class="spec">2. 平台承诺：绝不收取任何费用，每一分钱都用于患者救治。</li>
+                    </ul>
+                </div> <a data-v-ab19b61c="" href="javascript:;">好的</a></div>
+        </div>
+    </div>
+    <script src="../res/js/lib/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".hospital-position").click(function(){
+                $(".shade").show();
+                $(".main").show();
+                $(".time-root").show();
+
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta content="" name="pgv" />
+    <title>动态</title>
+    <link rel="stylesheet" type="" href="../res/css/global.css">
+    <link rel="stylesheet" type="" href="../res/css/condition/phone.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <img src="../res/img/4.png" alt="">
+        </div>
+        <div class="phone_box box_item">
+                <span>
+                    <img src="../res/img/shoujihao@3x.png" alt="">
+                </span>
+            <input type="tel" placeholder="请输入手机号" id="phone">
+        </div>
+        <div class="code_box box_item">
+            <div class="code_left">
+                <span>
+                    <img src="../res/img/yanzhengma@3x.png" alt="">
+                </span>
+                <input type="tel" placeholder="请输入验证码" id="code" value="">
+            </div>
+            <button class="code_btn">获取验证码</button>
+        </div>
+        <span class="title">*为了保证筹款资金安全，请验证您的手机号</span>
+        <button class="ipt" id="ipt">验证</button>
+        <div class="player" id="player">
+            <div class="player_box" id="player_box">
+                <span id="title"></span>
+            </div>
+        </div>
+    </div>
+    <script src="../res/js/lib/jquery.min.js"></script>
+    <script src="../res/js/lib/conmon.js"></script>
+    <script src="../res/js/condition/phone.js"></script>
+    <script src="../res/js/lib/base-loading.js"></script>
+    <script>
+        $('.head').click(function () {
+            location.href = "./material.html";
+        });
+        inits();
+    </script>
+</body>
+
+</html>

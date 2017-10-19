@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta content="" name="pgv" />
+    <title>开户</title>
+    <link rel="stylesheet" type="" href="../res/css/global.css">
+    <link rel="stylesheet" type="" href="../res/css/mys/mys.css">
+</head>
+
+<body class="bank">
+    <div class="container">
+          <div class="item item_head">
+              <span class="left">开户人</span>
+              <input type="text" id="item1" placeholder="请输入开户人姓名" onblur="this.placeholder='请输入开户人姓名'" onfocus="this.placeholder=''">
+          </div>  
+          <div class="item">  
+               <span class="left">银行卡号</span>
+              <input type="text" id="item1" placeholder="请输入开户人姓名" onblur="this.placeholder='请输入开户人姓名'" onfocus="this.placeholder=''">
+          </div>  
+          <div class="item">
+               <span class="left">确认卡号</span>
+              <input type="text" id="item1" placeholder="请输入开户人姓名" onblur="this.placeholder='请输入开户人姓名'" onfocus="this.placeholder=''">
+          </div>  
+          <div class="item">
+               <span class="left">开户银行</span>
+               <select value="请选择">
+                     <option value="0">请选择</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+               </select>
+          </div> 
+          <div class="attention">
+              注意:收款人和开户人必须一致，银行卡号，开户行请务必填写正确，否则可能收不到钱。
+          </div> 
+         <button class="save" value="保存">保存</button>
+         <button class="history" value="返回">返回</button>
+    </div>
+    <div class="footer">
+        <a href="../home/index.html" class="bar-item">
+            <i class="icon bar-home"></i>首页
+        </a>
+        <a href="../condition/index.html" class="bar-item">
+            <i class="icon bar-timeline"></i>动态
+        </a>
+        <a href="../help/index.html" class="bar-item">
+            <i class="icon bar-message"></i>轻松互助
+        </a>
+        <a href="javascrpt:void(0)" class="bar-item active">
+            <i class="icon bar-user"></i>我
+        </a>
+    </div>
+
+    <script src="../res/js/lib/jquery.min.js"></script>
+    <script src="../res/js/lib/conmon.js"></script>
+    <script src="../res/js/lib/base-loading.js"></script>
+</body>
+
+</html>

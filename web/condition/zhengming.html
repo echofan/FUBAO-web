@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta content="" name="pgv" />
+    <title>诊断证明</title>
+    <link rel="stylesheet" type="" href="../res/css/global.css">
+    <link rel="stylesheet" href="../res/css/condition/lib/zyUpload.css">
+    <link rel="stylesheet" type="" href="../res/css/condition/audit.css">
+</head>
+
+<body class="zhengming">
+    <div class="container">
+        <div class="head">*为获取更多捐助者信任，以下信息将公开展示（照片除外）</div>
+
+        <div class="level1">
+            <h1>诊断信息</h1>
+            <div class="level1_box">
+                <span>疾病名称</span>
+                <input type="text" name="" value="" placeholder="请输入所患疾病名称">
+            </div>
+        </div>
+        <div class="level2">
+            <h1>就诊医院</h1>
+            <div id="distpicker">
+                <div class="level2-item">
+                    <span>医院所在省份</span>
+                    <!--<div class="select">-->
+                    <select class="form-control" id="province10"></select>
+                    <i></i>
+                    <!--<div class="arrow"></div>-->
+                    <!--</div>-->
+                </div>
+                <div class="level2-item">
+                    <span>医院所在城市</span>
+                    <!--<div class="select">-->
+                    <select class="form-control" id="city10"></select>
+                    <i></i>
+                    <!--<div class="arrow"></div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+            <div class="level2-item">
+                <span>就诊医院名称</span>
+                <a class="right" href="javascript:void(0);"><span class="_title">输入医院名称</span><i></i></a>
+            </div>
+            <div class="level2-item">
+                <span>是否在此医院确诊</span>
+                <div class="select">
+                    <select name="" id="">
+                        <option value="">请选择</option>
+                        <option value="">是</option>
+                        <option value="">否</option>
+                    </select>
+                    <div class="arrow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="level3">
+            <h1>证明资料<b style="font-size:13px;">(您只需选择一项填写即可)</b></h1>
+            <span class="spans">选择填写证明资料</span>
+            <div class="select">
+                <select name="" id="sid">
+                   <option value="item0">请选择</option> 
+                   <option value="item1">诊断证明</option> 
+                   <option value="item2">入院病案首页</option> 
+                   <option value="item3">出院小结</option> 
+                   <option value="item4">病情说明书</option> 
+                </select>
+                <div class="arrow"></div>
+            </div>
+            <div style="clear:both"></div>
+            <div class="hide_box">
+                <div class="items item0"></div>
+                <div class="items item1" id="id1">
+                    <p>*病情确诊后找主治医生开具，要求照片有医院公章，且照片内的信息清晰可见</p>
+                    <a class="imgs_box">
+                        <div class="imgs"><span>查看示例</span></div>
+                    </a>
+                </div>
+                <div class="items item2" id="id2">
+                    <p>*找主治医生帮忙查阅，要求照片内的信息清晰可见且有医院公章</p>
+                    <a class="imgs_box">
+                        <div class="imgs"><span>查看示例</span></div>
+                    </a>
+                </div>
+                <div class="items item3" id="id3">
+                    <p>*病例的一部分，出院后会给予患者，如正在住院，可提供住院例首页，要求照片内的信息清晰可见且有医院公章</p>
+                    <a class="imgs_box">
+                        <div class="imgs"><span>查看示例</span></div>
+                    </a>
+                </div>
+                <div class="items item4" id="id4">
+                    <p>*病情确诊后找主治医生开具，要求照片有医院公章，且照片内的信息清晰可见</p>
+                    <a class="imgs_box">
+                        <div class="imgs"><span>查看示例</span></div>
+                    </a>
+                </div>
+                <div class="demo material" id="demo" style="display:none"></div>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+        <p class="notice">遇到问题了？拨打：400-686-1179咨询</p>
+        <div class="footer">
+            保存
+        </div>
+        <div class="player">
+            <div class="player_box">
+                <img src="../res/img/xiaode.jpg" alt="">
+            </div>
+        </div>
+        <div class="hospital">
+            <div class="hospital-item">
+                <input type="text" placeholder="相关医院名称 如：协和医院" id="hospital_ipt" name="makeupCo" class="makeinp" oninput="change(this);">
+                <span class="delete"></span>
+            </div>
+            <div class="direct">
+                <span>直接使用：</span>
+                <strong class="clear-cut"></strong>
+                <div class="typenum" id="parent" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+    <script src="../res/js/lib/jquery.min.js"></script>
+    <script src="../res/js/lib/zepto.min.js"></script>
+    <script src="../res/js/condition/zyUpload_zhengming.js"></script>
+    <script src="../res/js/lib/select.js"></script>
+    <script src="../res/js/condition/jq22.js"></script>
+    <script src="../res/js/condition/zyFile.js"></script>
+    <script src="../res/js/condition/jquery.LightBox.js"></script>
+    <script src="./distpicker.data.js"></script>
+    <script src="./distpicker.js"></script>
+    <script src="../res/js/lib/base-loading.js"></script>
+    <script src="../res/js/condition/zhengming.js"></script>
+</body>
+</html>

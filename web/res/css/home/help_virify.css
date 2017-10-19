@@ -1,0 +1,69 @@
+body{background-color: #f0f0f2;}
+.container{background-color: #f0f0f2;width: 100%;height: 100%;}
+.relation{height: 45px;line-height:45px;border-bottom:1px solid #f0f0f0;padding:0 12px;background-color: #fff;}
+.relation label{font-size:15px;float:left;}
+.relation .select{float:left;height: 100%;width: 80%;padding-left:50px;box-sizing: border-box;}
+.relation .select select{border: none;-webkit-appearance: none;float: left;outline: none;height: 100%;width: 100%;font-size:15px;}
+.relation .select .arrow{margin-right: -10px;margin-top: -25.5px;float: right;width: 0;height: 0;font-size: 0;line-height: 0;border: 10.5px solid;border-color: #afafaf transparent transparent;}
+
+.names{height: 45px;line-height:45px;display:flex;border-bottom:1px solid #f0f0f0;padding:0 12px;background-color: #fff;}
+.names label{font-size:15px;float:left;flex:1;}
+.names input{flex:3;border:none;outline: none;font-size:15px;}
+
+.identity{height: 45px;line-height:45px;display:flex;border-bottom:1px solid #f0f0f0;padding:0 12px;background-color: #fff;}
+.identity label{font-size:15px;float:left;flex:1;}
+.identity input{flex:3;border:none;outline: none;font-size:15px;}
+#text{width: 100%;border:none;outline: none;border-bottom:1px solid #f0f0f0;padding:12px;height: 100px;box-sizing: border-box;}
+
+ P{padding:15px 12px;color:#999999;font-size:11px;}   
+.btns{background-color: #4cb034;text-align: center;height: 50px;line-height: 50px;margin-top:15px;
+         font-size:18px;border-radius: 8px;color:#fff;width: 94%;position:absolute;left:50%;margin-left:-47%;box-sizing: border-box;border:none;outline:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+.footer{position:fixed;z-index:10;bottom:0;width:100%;border-top:1px solid rgba(0,0,0,0.1);display:table;height:50px;}
+.footer .bar-item.active{ color: #43AC43;}
+.footer .bar-item{display: table-cell;width: 20%;text-align:center;vertical-align: middle;height: inherit;color: #999;position: relative;font-size: 11px;}
+.footer .bar-item .icon{width: 24px;height: 24px;display: block;margin:3px auto;background-size:96px;}
+.footer .bar-item .bar-home{background: url(../../img/tab_button_home_nor@2x.png) no-repeat;background-size: 100%;}
+.footer .bar-item .bar-timeline{background: url(../../img/tab_button_faqi_pre@2x.png) no-repeat;background-size: 100%;}
+.footer .bar-item .bar-message{background: url(../../img/tab_button_fubao_nor@2x.png) no-repeat;background-size: 100%;}
+.footer .bar-item .bar-user{background: url(../../img/tab_button_geren_nor@2x.png) no-repeat;background-size: 100%;}
+.new-bar-publish{width:55px;height:55px;background:url(../../img/jia.png) no-repeat;background-size:55px;position:relative;display:block;left:0;top:-7px;margin:-12px auto;}
+
+.container .header{height: 45px;background:#F0D797;padding:8px;line-height: 25px;font-size:13px;}
+.container .helps{height: 50px;background:#fff;line-height: 50px;margin-top:20px;}
+.container .helps div:first-child{float:left;margin-left:15px;}
+.container .helps div:first-child span:last-child{font-size:15px;vertical-align: bottom;}
+.container .helps div:last-child{float:right;font-size:16px;margin-right:25px;}
+.container .top{padding:10px;color:gray;font-size:13px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta content="" name="pgv" />
+    <title>身份验证</title>
+    <link rel="stylesheet" type="" href="../../res/css/global.css">
+    <link rel="stylesheet" href="../../res/css/condition/lib/zyUpload.css">
+    <link rel="stylesheet" type="" href="../../res/css/condition/verify.css">
+    <style>
+        .upload_preview{
+            position:absolute;
+            z-index:99;
+        }
+        .demo{
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+      <div class="container">
+            <div class="user">
+                <div class="control-label">受助人（患者）信息:</div>
+                <input type="text" name="user_name" id="user_name" value="" placeholder="受助人姓名（必填）"
+                 onblur="this.placeholder='受助人姓名（必填）'" onfocus="this.placeholder=''">
+                <input type="text" name="phone" id="phone" value="" placeholder="输入受助人身份证号码（必填）"
+                 onblur="this.placeholder='输入受助人身份证号码（必填）'" onfocus="this.placeholder=''">
+                 <div class="ident">
+                      <div>手持身份证照片：</div>
+                      <div id="demo" class="demo"></div>
+                 </div>
+                 <div style="clear:both"></div>
+                 <ul class="uls">
+                    <li>1、身份证上所有信息清晰可见，必须看清证件号，手持面部完整；</li>
+                    <li>2、如受助人因病不能拍照，可以单独拍身份证</li>
+                    <li>3、如受助人为儿童，无身份证，可提供户口本或出生证明照片。</li>
+                </ul>
+            </div>
+            <div class="relation">
+                <div class="relation_head">收款人与受助人的关系是：</div>
+                <ul>
+                    <li class="menuGroup">
+                         <div class="top">
+                             <span class="left">
+                                 <span>受助人（患者）本人</span>
+                                 <span>筹款打到受助人账户</span>
+                             </span>
+                             <span class="right"><input type="checkbox" checked="checked"><span class="radio_img"></span></span>
+                         </div>    
+                         <div class="bot">
+                              <input type="text" id="usernames" placeholder="受助人姓名（必填）"
+                                    onblur="this.placeholder='受助人姓名（必填）'" onfocus="this.placeholder=''">
+                         </div>
+                    </li>
+                    <li class="menuGroup"></li>
+                    <li class="menuGroup"></li>
+                </ul>
+            </div>
+      </div>
+      <div class="footer">
+         <a href="../home/index.html" class="bar-item">
+            <i class="icon bar-home"></i>首页
+        </a>
+        <a href="javascrpt:void(0)" class="bar-item active">
+            <i class="icon bar-timeline"></i>动态
+        </a>
+        <a href="javascrpt:void(0)" class="bar-item">
+            <i class="new-bar-publish"></i>发起
+        </a>
+        <a href="../help/index.html" class="bar-item">
+            <i class="icon bar-message"></i>轻松互助
+        </a>
+        <a href="../mys/index.html" class="bar-item">
+            <i class="icon bar-user"></i>我
+        </a>
+       </div>
+       <div class="hides">
+          <div class="hides-content">
+                <div class="header">
+                    <div class="title">
+                        <i class="marks"></i>
+                        <span>请警惕冒充轻松筹员工，以推广首页为名索取费用的诈骗行为。如遇请拨打轻松筹热线1010-1019进行核实举报。</span>
+                    </div>    
+                </div>
+                <div class="body">
+                    <div class="row">
+                        <a href="" class="item item1">
+                             <i class="icon love"></i>
+                             微爱通道
+                        </a>
+                        <a href="" class="item item2">
+                              <i class="icon sales"></i>
+                              尝鲜预售
+                        </a>
+                        <a href="" class="item item3">
+                               <i class="icon dream"></i>
+                              梦想清单  
+                        </a>
+                    </div>
+                </div> 
+                <div class="foot">
+                    <div class="imgs"></div>
+                </div>   
+          </div>
+    </div>  
+    <script src="../../res/js/lib/jquery.min.js"></script>
+    <script src="../../res/js/lib/conmon.js"></script>
+    <script src="../../res/js/condition/zyUpload_verify.js"></script>
+    <script src="../../res/js/condition/jq22.js"></script>
+    <script src="../../res/js/condition/zyFile.js"></script>
+    <script>
+        $(function(){
+            $(".menuGroup").click(function(){
+                $(this).find('.radio_img').toggleClass("radio");
+            });
+        })
+    </script>
+</body>
+</html>

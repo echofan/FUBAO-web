@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta content="" name="pgv" />
+    <title>身份验证</title>
+    <link rel="stylesheet" type="" href="../res/css/global.css">
+    <link rel="stylesheet" type="" href="../res/css/condition/audit.css">
+    <link rel="stylesheet" href="../res/css/condition/lib/zyUpload.css">
+    <style>
+         .material{background-color: #fff}
+         .item{width: 100%;}
+         .lb_wrap{display:none;z-index:99;}
+         .lg_img{display:none;}
+         .lightbox_bg{background:#000;display:none;background:rgba(0,0,0,0.7); position:fixed;left:0;bottom:0;width:100%;height:150%;z-index:12;}
+         .lightbox p{display:none;position:fixed;height:61px;width:38px;bottom:48%;left:0;z-index:2;background:transparent url(../../img/themes.png) no-repeat left top;margin-top:-30.5px;cursor:pointer;}
+         .lightbox p.next{left:auto;background-position:right top;right:0;}
+         .lightbox .nums{position:fixed;bottom:20%;left:50%;width: 100px;margin-left:-50px;color:#fff;font-size:18px;text-align: center;z-index:100;} 
+         .lightbox img{position:relative;top:0;left:0;}
+         .lightbox .imgs{position:fixed;top:50%;height:60%;margin-top:-60%;width: 100%;text-align: center;}
+         .lightbox .imgs img{width: 100%;height: 100%;background-size: cover;}
+    </style>
+</head>
+<body class="verify">
+       <div class="container">
+          <div class="head">*以下信息（姓名除外）不会对外公开，仅用于审核</div>
+          <div class="level1">
+              <h1 class=origin"">患者基本信息</h1>
+              <ul>
+                  <li>
+                      <span>真实姓名</span>
+                      <input type="text" name="" value="" placeholder="请输入患者真实姓名" id="names">
+                  </li>
+
+                  <li>
+                      <span>证件类型</span>
+
+                        <select id="select1">
+                            <option value="">身份证</option>  
+                            <option value="">出生证</option>  
+                        </select> 
+                        <div class="arrow"></div> 
+                  </li>
+                  <li>
+                       <span>证件号码</span>
+                      <input type="text" placeholder="请输入患者证件号码" minlength="15" maxlength="18">
+                  </li>
+              </ul>
+          </div>
+          <div class="level2">
+               <h1 class="origin">患者与身份证合照</h1>
+               <ul class="level2_ul">
+                   <li>1、身份证上所有信息必须清晰可见，请尽量靠近拍摄</li>
+                   <li>2、如受助人为儿童，需提供出生证明；<span>(查看示例)</span></li>
+                   <li>3、若因病无法拍照，请将患者与证件拍入一张照片中；</li>
+               </ul>
+               <div id="demo" class="demo material"></div>
+          </div>
+          <div style="clear:both;"></div>
+          <div class="level3">
+              <h1 class="origin">患者个人保障状况</h1>
+              <div class="item">
+                  <span>是否按时缴纳医保</span>
+                  <div class="select">
+                   <select>
+                      <option value="">请选择</option>
+                      <option value="">是</option>
+                      <option value="">否</option>
+                   </select>
+                   <lable class="arrow"></lable>
+                  </div>
+
+             </div>
+             <div class="item">
+                  <span>是否购买商业重大疾病保险</span>
+                  <div class="select">
+                     <select>
+                       <option value="">请选择</option>
+                       <option value="">是</option>
+                       <option value="">否</option>
+                     </select>
+                     <lable class="arrow"></lable>
+                  </div>
+             </div>
+          </div>
+          <div class="adds">
+              <div>征信补充部分<i class="down"></i></div>
+              <p>填写一下信息将提高您的筹款可信度</p>
+          </div>
+          <div class="toggle_box">
+              <div class="content1">
+                  <h1>患者家庭房屋财产状况（选填）</h1>
+                  <ul>
+                      <li><span>房产数量</span><input type="tel" placeholder="请输入房产数量"></li>
+                      <li><span>房产总价值</span><input type="tel" placeholder="请输入房产价值"><span class="posi">元</span></li>
+                  </ul>
+                  <div class="box">
+                        <span>房产状态</span>
+                         <div class="select">
+                              <select name="" id="">
+                                  <option value="">请选择</option>
+                                  <option value="">已变卖</option>
+                                  <option value="">未变卖</option>
+                              </select>
+                              <div class="arrow"></div>
+                          </div>
+                      </div>
+              </div>
+              <div style="clear:both;"></div>
+              <div class="content2">
+                  <h1>患者家庭车辆财产状况（选填）</h1>
+                  <ul>
+                      <li><span>汽车数量</span><input type="tel" placeholder="请输入房产数量"></li>
+                      <li>
+                          <span>汽车总价值</span>
+                          <input type="tel" placeholder="请输入房产价值">
+                          <span class="posi">元</span>
+                     </li>
+                  </ul>
+                  <div class="box">
+                          <span>汽车状态</span>
+                          <div class="select">
+                              <select name="" id="">
+                                  <option value="">请选择</option>
+                                  <option value="">已变卖</option>
+                                  <option value="">未变卖</option>
+                              </select>
+                              <div class="arrow"></div>
+                          </div>
+                    </div>
+              </div>
+          </div>
+          <div class="notice">遇到问题了？拨打：400-686-1179咨询</div>
+          <div class="foot_btn">保存</div>
+          <div class="player">
+              <div class="player_box">
+                   <img src="../res/img/xiaode.jpg" alt="">        
+              </div>
+          </div>
+       </div> 
+    <script src="../res/js/lib/jquery.min.js"></script>
+    <script src="../res/js/lib/zepto.min.js"></script>
+    <script src="../res/js/lib/conmon.js"></script>
+    <script src="../res/js/condition/zyUpload_verify.js"></script>
+    <script src="../res/js/condition/jq22.js"></script>
+    <script src="../res/js/condition/zyFile.js"></script>
+    <script src="../res/js/lib/base-loading.js"></script>   
+    <script>
+        $(function(){
+            //localstorage
+            $("#names").blur(function(){
+                var names_val=$(this).val();
+                localStorage.setItem('names',names_val);
+            });
+            window.localStorage? localStorage.getItem("names"): Cookie.read("names");
+            $(".adds").click(function(){
+                $('.toggle_box').toggle();
+            });
+            $(".foot_btn").click(function(){
+                  console.log($('input').val())
+                  
+            })        
+            function total(){
+                var numArr=[];
+                var ipt=$(".container").find("input");
+                for(var i=0;i<ipt.length;i++){
+                    numArr.push(ipt.eq(i).val());
+                }
+                console.info(numArr);
+                  localStorage.setItem('arrs',numArr);
+                //    window.localStorage? localStorage.getItem("menuTitle"): Cookie.read("menuTitle");
+            }
+             $(".material .item").LightBox({
+                    controls: true    
+            })
+            $(".adds").click(function(){
+                $(this).find('i').toggleClass('up');
+            });
+
+            $(".upload_choose").on('click','.imgsts',function(){
+                $(".player").show();
+            });
+            $(".player").click(function(){
+                var e=e||window.event;
+                var elem=e.target||e.srcElement;
+                while (elem){
+                    if(elem.id&&elem.id==="player_box"){
+                        return
+                    }
+                    elem=elem.parentNode;
+                }
+                $(".player").hide();
+            });
+        });
+    </script>  
+</body>
+</html>

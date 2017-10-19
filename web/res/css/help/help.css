@@ -1,0 +1,8 @@
+.footer{position:fixed;z-index:10;bottom:0;width:100%;border-top:1px solid rgba(0,0,0,0.1);display:table;height:50px;}
+.footer .bar-item.active{ color: #43AC43;}
+.footer .bar-item{display: table-cell;width: 20%;text-align:center;vertical-align: middle;height: inherit;color: #999;position: relative;font-size: 11px;}
+.footer .bar-item .icon{width: 24px;height: 24px;display: block;margin:3px auto;background-size:96px;}
+.footer .bar-item .bar-home{background: url(../../img/tab_button_home_nor@2x.png) no-repeat;background-size: 100%;}
+.footer .bar-item .bar-timeline{background: url(../../img/tab_button_faqi_nor@2x.png) no-repeat;background-size: 100%;}
+.footer .bar-item .bar-message{background: url(../../img/tab_button_fubao_pre@2x.png) no-repeat;background-size: 100%;}
+.footer .bar-item .bar-user{background: url(../../img/tab_button_geren_nor@2x.png) no-repeat;background-size: 100%;}

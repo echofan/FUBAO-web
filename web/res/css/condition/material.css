@@ -1,0 +1,42 @@
+.container{width:100%;box-sizing: border-box;padding:0 15px;padding-bottom:80px;}
+.head{background-color: #f0f0f2;border-radius:10px;height: 100px;width: 100%;margin-top:20px;}
+.head input{width: 100%;height: 100%;border:none;outline: none;background-color: #f0f0f2;border-radius:10px;font-size:18px;color:#ccc;font-weight:600;}
+.title{color:#ccc;margin-top:10px;font-size:12px;}
+.headline{margin-top:30px;}
+.headline p{color:green;font-size:16px;}
+.headline input{margin-top:10px;width: 100%;box-sizing: border-box;border:none;outline: none;height: 50px;line-height: 50px;
+                 background-color: #f0f0f2;padding-left:15px;border-radius:9px;font-size:14px;}
+.explain{margin-top:25px;}
+.explain p{color:green;font-size:16px;}
+.explain textarea{background-color: #f0f0f2;font-size:14px;box-sizing:border-box;border-radius:9px;
+           letter-spacing: 1px; margin-top:10px;height: 100px;outline: none;border:none;width:100%;padding:10px 15px;}
+.show{margin-top:25px;}
+.show p:nth-child(1){color:green;font-size:16px;}
+.show p:nth-child(2){margin-top:3px;}
+.demo{margin-top:7px!important;}
+.commit{border-top:1px solid #ccc;margin-top:10px;padding-top:20px;color:#ccc;}
+.commit h1{font-size:14px;margin-bottom:10px;color:#ccc;}
+.commit span,p{color:#ccc;}
+.commit p{margin-bottom:5px;}
+.commit input{outline: none;margin-right:5px;}
+.footer{background-color: green;width: 93%; border-radius:9px;box-sizing: border-box; text-align: center;height: 45px;line-height: 45px;color:#fff;font-size:15px;position:fixed;bottom:15px;}
+.material{background-color: #fff}
+.item{width: 100%;}
+/*.item ul{width: 100%;overflow:hidden;}
+.item ul li{float:left;width:25%;height: 60px;margin-bottom:5px;}
+.item ul li div{margin-right:5px;height: 100%;}
+.item ul li div img{width: 100%;height: 100%;}*/
+.lb_wrap{display:none;}
+.lg_img{display:none;}
+.lightbox_bg{background:#000;display:none;background:rgba(0,0,0,0.7); position:fixed;left:0;bottom:0;width:100%;height:150%;z-index:1;}
+.lightbox p{display:none;position:fixed;height:61px;width:38px;bottom:48%;left:0;z-index:2;background:transparent url(../../img/themes.png) no-repeat left top;margin-top:-30.5px;cursor:pointer;}
+.lightbox p.next{left:auto;background-position:right top;right:0;}
+.lightbox .nums{position:fixed;bottom:20%;left:50%;width: 100px;margin-left:-50px;color:#fff;font-size:18px;text-align: center;z-index:100;} 
+.lightbox img{position:relative;top:0;left:0;}
+.imgs{position:fixed;top:50%;height:60%;margin-top:-60%;width: 100%;text-align: center;}
+.imgs img{width: 100%;height: 100%;background-size: cover;}
+
+
+
+
+

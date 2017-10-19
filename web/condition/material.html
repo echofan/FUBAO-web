@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta content="" name="pgv" />
+    <title>动态</title>
+    <link rel="stylesheet" type="" href="../res/css/global.css">
+    <link rel="stylesheet" href="../res/css/condition/lib/zyUpload.css">
+    <link rel="stylesheet" type="" href="../res/css/condition/material.css">
+    <link rel="stylesheet" href="../res/css/default-skin.css">
+    <link rel="stylesheet" href="../res/css/photoswipe.css">
+    <style>
+      .pswp{
+        display: none!important;
+        position: fixed!important;
+        width: 100%!important;
+        height: 100%!important;
+        left: 0!important;
+        top: 0!important;
+        overflow: hidden!important;
+        -ms-touch-action: none!important;
+        touch-action: none!important;
+        z-index: 1500!important;
+        -webkit-text-size-adjust: 100%!important;
+        -webkit-backface-visibility: hidden!important;
+        outline: none!important;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <input type="text" name="" value="" style="text-align:center;" placeholder="请输入筹款金额">
+        </div>
+        <p class="title">*无论是否筹满，均可提现</p>
+        <div class="headline">
+            <p>筹款标题</p>
+            <input type="text" placeholder="标题最多填写25个字">
+        </div>
+        <div class="explain">
+            <p>求助说明</p>
+            <textarea rows="" cols="" id="text" placeholder="您填写的内容将会自动保存，请放心填写（求助文章以200-400字为宜）" onblur="this.placeholder='您填写的内容将会自动保存，请放心填写（求助文章以200-400字为宜）'"
+                onfocus="this.placeholder=''"></textarea>
+        </div>
+        <div class="show">
+            <p>展示图片</p>
+            <p>上传照片更容易得到大家的新任，筹到更多钱（可上传患者卧床照片，患者前的生活照等。）</p>
+            <div id="demo" class="demo material"></div>
+        </div>
+        <div style="clear:both"></div>
+        <div class="commit clearfix">
+            <h1>发起人承诺：</h1>
+            <p>1、所提交的文字与图片资料完全真实，无任何虚构事实及隐瞒真相的情况，如有不实或将筹款用于治疗外的其他事项，愿承担全部法律责任；</p>
+            <p>2、当前并未在其他平台上发起筹款</p>
+            <input type="checkbox" id="commit_ipt">本人已经阅读并同意《水滴筹个人求助信息发布条款》
+        </div>
+        <div class="footer">
+            保存
+        </div>
+    </div>
+    <script src="../res/js/lib/jquery.min.js"></script>
+    <script src="../res/js/lib/zepto.min.js"></script>
+    <script src="../res/js/lib/conmon.js"></script>
+    <script src="../res/js/condition/zyUpload.js"></script>
+    <script src="../res/js/condition/jq22.js"></script>
+    <script src="../res/js/condition/zyFile.js"></script>
+    <script src="../res/js/condition/jquery.LightBox.js"></script>
+    <script src="../res/js/lib/base-loading.js"></script>
+    <script src="../res/js/lib/photoswipe-ui-default.min.js"></script>
+    <script src="../res/js/lib/photoswipe.min.js"></script>
+    <script src="../res/js/lib/photo.js"></script>
+    <script>
+        $(function () {
+            $('.footer').click(function () {
+                location.href = "./audit.html"
+                var img = $("#preview").children('.upload_append_list');
+                var imgs = [];
+                $(".upload_append_list").each(function (index) {
+                    var lis = $('#uploadImage_' + index).attr('src');
+                    imgs.push(lis);
+                    // console.log(imgs);
+                })
+            })
+            $(".imgsts").hide();
+             $(".material .item").LightBox({
+                    controls: true
+
+            })
+            function banners(){
+                var startX=0;
+                var moveX=0;
+                var distinceX=0;
+                var isMove=false;
+                var imgs=document.querySelector('.imgs');
+                imgs.addEventListener("touchstart",function(event){
+                    console.log(123);
+                    startX=event.touches[0].clientX;
+                    console.log(startX);
+                });
+            }
+            banners();
+        })
+    </script>
+</body>
+
+</html>

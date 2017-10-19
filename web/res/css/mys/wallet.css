@@ -1,0 +1,29 @@
+.wallet .head{width: 100%;background-color: #43AC43;height: 200px;text-align: center;color:#fff;box-sizing: border-box;position:relative;}
+.wallet .head p{color:#fff;}
+.wallet .head .titles{font-size: 50px;font-weight: 500;height: 100%;width: 100%;margin:0 auto;line-height: 200px;}
+.wallet .head .surplus{position:absolute;bottom:40px;width: 100%;font-size:15px;}
+.wallet .more{background-color: #fff;height: 50px;line-height: 50px;padding:0 15px;}
+.wallet .more span:first-child{float:left;}
+.wallet .more span:last-child{float:right;color:#43AC43;}
+.wallet .more span:last-child span{margin-right:10px;}
+.wallet .more span:last-child i{background: url(../../img/con_icon_back_nor@3x.png) no-repeat;
+         margin-top:15px;width: 10px;height: 20px;background-size: 100%;position:absolute;vertical-align: bottom;}
+.wallet .foot{position:fixed;bottom:0;width: 100%;height: 50px;line-height: 50px;text-align: center;font-size:16px;color:#43AC43;background-color: #fff;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

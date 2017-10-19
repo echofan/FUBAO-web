@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta content="" name="pgv" />
+    <title>我的发起</title>
+    <link rel="stylesheet" type="" href="../res/css/global.css">
+    <link rel="stylesheet" type="" href="../res/css/mys/mys.css">
+</head>
+<body style="background:#ededed;" class="sponsor">
+     <div class="container">
+           <div class="tab">
+               <ul  class="tab-box">
+                   <li class="tab-li">全部</li>
+                   <li class="tab-li active">筹款中</li>
+                   <li class="tab-li">已结束</li>
+               </ul>
+           </div>
+     </div>   
+       <div class="box">
+                <ul>
+                    <li  class="box-li">
+                        <ul>
+                            <li>
+                                 123
+                            </li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li class="box-li box-active">222222222</li>
+                    <li class="box-li">33333333</li>
+                </ul>
+           </div>
+        <div class="footer">
+        <a href="../home/index.html" class="bar-item">
+            <i class="icon bar-home"></i>首页
+        </a>
+        <a href="../condition/index.html" class="bar-item">
+            <i class="icon bar-timeline"></i>动态
+        </a>
+        <a href="../help/index.html" class="bar-item">
+            <i class="icon bar-message"></i>轻松互助
+        </a>
+        <a href="javascrpt:void(0)" class="bar-item active">
+            <i class="icon bar-user"></i>我
+        </a>
+    </div>
+    <script src="../res/js/lib/jquery.min.js"></script>
+    <script src="../res/js/lib/conmon.js"></script>
+    <script src="../res/js/lib/base-loading.js"></script>
+    <script>
+        $(function(){
+            $(".tab-li").click(function(){
+                $(this).addClass("active").siblings().removeClass("active");
+                var idx=$(this).index();
+                $(".box-li").eq(idx).addClass('box-active').siblings().removeClass('box-active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.container{background: #f0f0f2;}
+.head{height: 45px;line-height:45px;padding-left:10px;background-color: #f0f0f2;}
+.head i{background:url(../../img/zhichi.png) no-repeat; width: 15px;height: 15px;background-size: 15px;float:left;margin-top:15px;padding-right:5px;vertical-align: bottom;}
+.price{background-color: #fff; display:flex;height: 40px;line-height:40px;font-size:15px;border-bottom:1px solid #ccc;border-top:1px solid #ccc;}
+.price div{flex:1;padding-left:10px;}
+.price input{flex:3;border:none;outline: none;}
+.wuming{height: 50px;line-height:50px;background-color: #fff;}
+.wuming_btn{padding:0 10px;width: 100%;display:block;position:relative;display:flex;box-sizing: border-box;}
+.wuming_btn input{clip:rect(0,0,0,0);pointer-events:none;position:absolute;width: 100%;height: 100%;left:-5px;}
+.checkbox_btn{background: url(../../img/no.jpg) no-repeat;height: 30px;width: 30px;
+             margin-top:10px;background-size: 30px;border-radius:50%;display:inline-block;}
+.wuming_title{height: 50px;line-height: 50px;font-size:16px;float:left;margin-left:70px;}
+.checkbox_btn_yes{background: url(../../img/yes.jpg) no-repeat;height: 30px;width: 30px;
+             margin-top:10px;background-size: 30px;display:inline-block;}
+.wx_play{height: 50px;line-height: 50px;margin-top:15px;background:#fff;}
+.wx_play span:nth-child(1){background:url(../../img/play_img.png) no-repeat 0 -64px;display:inline-block;
+                margin-left:10px;width: 32px;height: 32px;background-size:100%;vertical-align: middle;}
+.wx_play span:nth-child(2){margin-left:10px;font-size:15px;}
+.wx_play span:nth-child(3){background:url(../../img/btn_yes.jpg) no-repeat;display:inline-block;
+                margin-right:15px;float:right;width: 25px;height: 25px;background-size:100%;vertical-align: middle;margin-top:10px;}
+
+.textarea{margin-top:15px;background-color: #fff;width: 100%;}
+.textarea textarea{width: 100%;border:none;outline: none;font-size:14px;box-shadow: none;padding:10px;box-sizing: border-box;}
+
+.footer{position:fixed;bottom:0;left:0;width: 100%;background-color: #fff;}
+.footer .accept{height: 50px;line-height:50px;width: 100%;}
+.footer .accept label{margin-left:10px;width: 100%;display: inline-block;}
+.footer .accept label img{width: 30px;height: 30px;background-size:30px; }
+.footer .accept span{margin-left:50px;font-size:13px;}
+.footer .Alltotal{height: 50px;line-height:50px;border-top:1px solid #ccc;width: 100%;}
+.footer .Alltotal div{float:left;margin-left:10px;font-size:14px;}
+.footer .Alltotal .ast{float:right;margin-right:10px;height: 40px;display:block;
+                  margin-top:5px;color:#fff;font-size:15px;text-align:center;line-height:40px;width: 100px;border-radius:5px;background: #2baf2b;}

@@ -1,0 +1,28 @@
+.container{}
+.level_one{padding-bottom:30px;background-color: #fff;position:relative;}
+.head{padding:15px 10px;height: 50px; width: 100%;box-sizing: border-box;}
+.head .left{float:left;}
+.head .left img{width: 30px;height: 30px;border-radius:50%;background-size: 100%;float:left;}
+.head .left .detail{float:left;margin-left:10px;}
+.head .right{float:right;padding:5px 10px;border-radius:5px;border: 1px solid green;color:green;}
+.content{margin:0 15px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;height: 50px;margin-top:10px;display:flex;}
+.content div{flex:1;text-align: center;}
+.content div span{display:block;}
+.content div span:last-child{font-size:18px;font-weight: 600;height: 35px;line-height:30px;}
+.content div span:first-child{height: 15px;margin-top:5px;}
+.surplus{position:absolute;height: 20px;line-height:20px;width: 100px;text-align: center;color:#fff;background: green;left:0;bottom:0;}
+
+.level_two{background-color: #fff;margin-top:20px;}
+.level_two .item{border-top:1px solid #ccc;padding:10px 15px;font-size:14px;}
+.level_two .item div:nth-child(2) span{color:#ccc;}
+
+.level_three{background: #fff;margin-top:20px;font-size:15px;}
+.level_three .item1{border-bottom:1px solid #ccc;}
+.level_three .item{height: 50px;padding:0 10px;}
+.level_three .item div:first-child{float:left;line-height: 50px;}
+.orange{padding:3px 5px;margin-top:10px;border: 1px solid orange;border-radius:5px;float:right;}
+.green{margin-top:10px;padding:3px 5px;border: 1px solid green;border-radius:5px;float:right;}
+
+
+
+
